@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Selectors</title>
+    <style>
+        div{
+            background-color: red;
+            color: aliceblue;
+        }
+
+        /*child selectores*/
+        div > p{
+            color: aqua;
+            background-color: rgb(20, 53, 53);
+        }
+        /* Descendant Selectro*/
+        div p{
+            color: aqua;
+            background-color: rgb(20, 53, 53);
+        }
+
+        /* Universal Selectores */
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* pseudo Selector */
+        a:visited{
+            color: rgb(224, 141, 31);
+        }
+        a:link{
+            color: green;
+        }
+        p:first-child{
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <main class="one">
+        <p>i am first</p>
+        <p>i am secont</p>
+    </main>
+    <div>
+        i am a div
+        <article>
+        <p>another div</p>
+    </article>
+    </div>
+    <div>
+    </div>
+    <a href="https://www.google.com">Go to Google</a>
+    <a href="https://www.google.com">Go to Facebook</a>
+</body>
+</html>
