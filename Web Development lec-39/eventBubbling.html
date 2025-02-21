@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .child{
+            background-color: aliceblue;
+            border: 2px solid black;
+            padding: 20px;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        .container{
+            background-color: antiquewhite;
+            padding: 15px;
+            margin: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span class="childcontainer">
+            <div class="child">
+                i am child
+            </div>
+        </span>
+    </div>
+
+    <script>
+        document.querySelector(".child").addEventListener("contextmenu", (e) => {
+            e.stopPropagation()
+            alert("child was click")
+        })
+
+        document.querySelector(".childcontainer").addEventListener("contextmenu", (e) => {
+            e.stopPropagation()
+            alert("childcontainer was click")
+        })
+
+        document.querySelector(".container").addEventListener("contextmenu", (e) => {
+            e.stopPropagation()
+            alert("container was click")
+        })
+
+        function getrandomcolor() {
+    let val1 = Math.ceil(0 + Math.random()* 220);
+    let val2 = Math.ceil(0 + Math.random()* 220);
+    let val3 = Math.ceil(0 + Math.random()* 220);
+    return `rgb(${val1}, ${val2}, ${val3})`
+};
+
+        // setInterval(() => {
+        //     document.querySelector(".container").style.background = getrandomcolor()
+        // }, 3000);
+
+        let a = setTimeout(() => {
+            Interval
+        }, timeout);(() => {
+            document.querySelector(".container").style.background = getrandomcolor()
+        }, 1000);
+
+        console.log(a)
+
+    </script>
+</body>
+
+</html>
