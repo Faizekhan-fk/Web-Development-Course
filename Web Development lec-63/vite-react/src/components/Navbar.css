@@ -1,0 +1,12 @@
+
+ul {
+    flex-direction: row;
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+nav{
+    background-color: aqua;
+    padding: 30px;
+}
